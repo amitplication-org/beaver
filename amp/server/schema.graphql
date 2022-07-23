@@ -106,7 +106,7 @@ input BuildingWhereUniqueInput {
 }
 
 type BulletinBoard {
-  buildings: Building
+  building: Building
   createdAt: DateTime!
   id: String!
   messages(orderBy: [MessageOrderByInput!], skip: Float, take: Float, where: MessageWhereInput): [Message!]!
@@ -114,24 +114,24 @@ type BulletinBoard {
 }
 
 input BulletinBoardCreateInput {
-  buildings: BuildingWhereUniqueInput
+  building: BuildingWhereUniqueInput
   messages: MessageCreateNestedManyWithoutBulletinBoardsInput
 }
 
 input BulletinBoardOrderByInput {
-  buildingsId: SortOrder
+  buildingId: SortOrder
   createdAt: SortOrder
   id: SortOrder
   updatedAt: SortOrder
 }
 
 input BulletinBoardUpdateInput {
-  buildings: BuildingWhereUniqueInput
+  building: BuildingWhereUniqueInput
   messages: MessageUpdateManyWithoutBulletinBoardsInput
 }
 
 input BulletinBoardWhereInput {
-  buildings: BuildingWhereUniqueInput
+  building: BuildingWhereUniqueInput
   id: StringFilter
   messages: MessageListRelationFilter
 }
