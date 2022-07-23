@@ -20,7 +20,7 @@ export const BulletinBoardEdit = (props: EditProps): React.ReactElement => {
         <ReferenceInput
           source="building.id"
           reference="Building"
-          label="Buildings"
+          label="Building"
         >
           <SelectInput optionText={BuildingTitle} />
         </ReferenceInput>

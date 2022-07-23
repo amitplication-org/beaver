@@ -20,7 +20,7 @@ export const BulletinBoardShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <ReferenceField
-          label="Buildings"
+          label="Building"
           source="building.id"
           reference="Building"
         >

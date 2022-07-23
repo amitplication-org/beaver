@@ -107,12 +107,12 @@ model Poll {
 }
 
 model BulletinBoard {
-  buildings   Building? @relation(fields: [buildingsId], references: [id])
-  buildingsId String?   @unique
-  createdAt   DateTime  @default(now())
-  id          String    @id @default(cuid())
-  messages    Message[]
-  updatedAt   DateTime  @updatedAt
+  building   Building? @relation(fields: [buildingId], references: [id])
+  buildingId String?   @unique
+  createdAt  DateTime  @default(now())
+  id         String    @id @default(cuid())
+  messages   Message[]
+  updatedAt  DateTime  @updatedAt
 }
 
 model City {

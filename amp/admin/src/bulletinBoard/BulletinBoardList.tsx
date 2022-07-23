@@ -21,7 +21,7 @@ export const BulletinBoardList = (props: ListProps): React.ReactElement => {
     >
       <Datagrid rowClick="show">
         <ReferenceField
-          label="Buildings"
+          label="Building"
           source="building.id"
           reference="Building"
         >

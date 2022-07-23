@@ -25,7 +25,7 @@ class BulletinBoardOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  buildingsId?: SortOrder;
+  buildingId?: SortOrder;
 
   @ApiProperty({
     required: false,

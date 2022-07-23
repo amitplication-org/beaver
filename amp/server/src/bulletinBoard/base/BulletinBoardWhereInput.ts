@@ -28,7 +28,7 @@ class BulletinBoardWhereInput {
   @Field(() => BuildingWhereUniqueInput, {
     nullable: true,
   })
-  buildings?: BuildingWhereUniqueInput;
+  building?: BuildingWhereUniqueInput;
 
   @ApiProperty({
     required: false,

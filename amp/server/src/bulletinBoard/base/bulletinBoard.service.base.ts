@@ -58,11 +58,11 @@ export class BulletinBoardServiceBase {
       .messages(args);
   }
 
-  async getBuildings(parentId: string): Promise<Building | null> {
+  async getBuilding(parentId: string): Promise<Building | null> {
     return this.prisma.bulletinBoard
       .findUnique({
         where: { id: parentId },
       })
-      .buildings();
+      .building();
   }
 }
