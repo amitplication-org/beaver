@@ -24,7 +24,7 @@ class BulletinBoard {
   @ValidateNested()
   @Type(() => Building)
   @IsOptional()
-  buildings?: Building | null;
+  building?: Building | null;
 
   @ApiProperty({
     required: true,

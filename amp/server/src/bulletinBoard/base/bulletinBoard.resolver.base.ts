@@ -102,9 +102,9 @@ export class BulletinBoardResolverBase {
       data: {
         ...args.data,
 
-        buildings: args.data.buildings
+        building: args.data.building
           ? {
-              connect: args.data.buildings,
+              connect: args.data.building,
             }
           : undefined,
       },
@@ -127,9 +127,9 @@ export class BulletinBoardResolverBase {
         data: {
           ...args.data,
 
-          buildings: args.data.buildings
+          building: args.data.building
             ? {
-                connect: args.data.buildings,
+                connect: args.data.building,
               }
             : undefined,
         },
@@ -192,10 +192,10 @@ export class BulletinBoardResolverBase {
     action: "read",
     possession: "any",
   })
-  async buildings(
+  async building(
     @graphql.Parent() parent: BulletinBoard
   ): Promise<Building | null> {
-    const result = await this.service.getBuildings(parent.id);
+    const result = await this.service.getBuilding(parent.id);
 
     if (!result) {
       return null;
